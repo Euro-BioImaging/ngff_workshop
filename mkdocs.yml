@@ -1,5 +1,5 @@
 site_name: NGFF Workshop
-repo_url: https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial
+repo_url: https://github.com/Euro-BioImaging/ngff_workshop
 theme:
   name: material
   logo: figures/logo1.png
