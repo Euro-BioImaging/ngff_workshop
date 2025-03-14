@@ -1,0 +1,10 @@
+- Open the NGFF converter; [tool website](https://www.glencoesoftware.com/products/ngff-converter/) 
+    - Drag and drop the image file
+    - A dialog will open:
+        - Output format: OME-NGFF
+        - Output location: Choose some folder on your computer
+        - [ Apply ]
+    - [ Run Jobs ]
+- Inspect the OME-NGFF output using your file browser
+- Inspect the XML in the OME subfolder using your web browser
+- Open the OME-NGFF images using a tool of your choice, e.g. Fiji N5

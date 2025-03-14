@@ -1,0 +1,56 @@
+site_name: NGFF Workshop
+repo_url: https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial
+theme:
+  name: material
+  logo: figures/logo1.png
+#  palette:
+#    scheme: default
+  features:
+    - navigation.tabs
+    - navigation.tracking
+    - content.code.copy
+    - header.autohide  # (optional: hides header on scroll for more space)
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Inspecting and Validating OME-Zarr:
+      - "Overview": inspection_overview.md
+      - "OME-Zarr Validator": validate_ome_zarr_ome-zarr-validator.md
+      - "ome-zarr-py": ome_zarr_inspection_ome-zarr-py.md
+  - Opening OME-Zarr:
+      - "Overview": open_overview.md
+      - "MoBIE": ome_zarr_open_mobie.md
+      - "n5-ij": ome_zarr_open_java_n5-ij.md
+      - "n5-viewer": ome_zarr_open_java_n5-viewer.md
+      - "zarr-python": open_local_ome_zarr_zarr-python.md
+      - "ome-zarr-py": open_ome_zarr_ome-zarr-py.md
+      - "napari-ome-zarr": ome_zarr_visualisation_napari.md
+      - "Web-based viewers": web_based_viewers.md
+  - Saving OME-Zarr:
+      - "Overview": save_overview.md
+      - "n5-ij": save_ome_zarr_fiji.md
+      - "ome-zarr-py": save_ome_zarr_ome-zarr-py.md
+  - Converting Data to OME-Zarr:
+      - "Overview": conversion_overview.md
+      - "EuBI-Bridge": ome_zarr_creation_EuBI-Bridge.md
+      - "NGFF-Converter": omet_zarr_conversion_ngff-converter.md
+      - "BatchConvert": ome_zarr_creation_BatchConvert.md
+
+plugins:
+  - search
+  - glightbox
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      pygments_style: default
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
