@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="inspection_overview/">
+        <link rel="next" href="what_is_ngff/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -87,7 +87,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="NGFF Workshop" class="md-header__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  <img src="figures/logo1.png" alt="logo">
+  <img src="figures/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -203,6 +203,23 @@
   
   
   
+    <li class="md-tabs__item">
+      <a href="what_is_ngff/" class="md-tabs__link">
+        
+  
+    
+  
+  Introduction to OME-Zarr
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
     
     
       <li class="md-tabs__item">
@@ -295,7 +312,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="NGFF Workshop" class="md-nav__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  <img src="figures/logo1.png" alt="logo">
+  <img src="figures/logo.png" alt="logo">
 
     </a>
     NGFF Workshop
@@ -370,15 +387,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Sections
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inspecting-and-validating-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Inspecting and Validating OME-Zarr
@@ -386,8 +422,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -395,8 +431,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
@@ -404,8 +440,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#converting-data-to-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Converting Data to OME-Zarr
@@ -413,11 +449,37 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="what_is_ngff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to OME-Zarr
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -439,10 +501,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -454,8 +516,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Inspecting and Validating OME-Zarr
           </label>
@@ -490,11 +552,11 @@
   
   
     <li class="md-nav__item">
-      <a href="validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
+      <a href="ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OME-Zarr Validator
+    ome-zarr-py
     
   </span>
   
@@ -512,11 +574,11 @@
   
   
     <li class="md-nav__item">
-      <a href="ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
+      <a href="validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ome-zarr-py
+    OME-Zarr Validator
     
   </span>
   
@@ -551,10 +613,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -566,8 +628,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Opening OME-Zarr
           </label>
@@ -585,28 +647,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ome_zarr_open_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MoBIE
     
   </span>
   
@@ -668,6 +708,50 @@
   
   
     <li class="md-nav__item">
+      <a href="ome_zarr_visualisation_napari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    napari-ome-zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ome_zarr_open_mobie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MoBIE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="open_local_ome_zarr_zarr-python/" class="md-nav__link">
         
   
@@ -695,28 +779,6 @@
   
   <span class="md-ellipsis">
     ome-zarr-py
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ome_zarr_visualisation_napari/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    napari-ome-zarr
     
   </span>
   
@@ -773,10 +835,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -788,8 +850,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Saving OME-Zarr
           </label>
@@ -885,10 +947,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -900,8 +962,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Converting Data to OME-Zarr
           </label>
@@ -958,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="omet_zarr_conversion_ngff-converter/" class="md-nav__link">
+      <a href="ome_zarr_conversion_ngff-converter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,15 +1091,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sections" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Sections
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#inspecting-and-validating-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Inspecting and Validating OME-Zarr
@@ -1045,8 +1126,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -1054,8 +1135,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
@@ -1063,13 +1144,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#converting-data-to-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Converting Data to OME-Zarr
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1099,16 +1185,35 @@ and visualizing OME-Zarr data.</p>
 <p>The sections given below are intended to guide you through working with 
 OME-Zarr datasets using a variety of tools and libraries. 
 Each section is designed to cover a specific task and introduces some of the
-existing tools to address that particular task</p>
+existing tools to address that particular task.</p>
+<p>It is important to note that this workshop covers OME-Zarr version 0.4. With
+transition to the version 0.5, many changes have been implemented in the 
+specifications. These changes are, however, not covered or discussed here.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Download the <a href="">zip file</a> to a convenient local directory.
+Extract the datasets to a folder. This folder contains
+all the image data to be used in the sections.</p>
+<p>Verify that the conda environment <code>ngff_workshop</code> is 
+available by running:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>env<span class="w"> </span>list
+</span></code></pre></div>
+If you do not see <code>ngff_workshop</code>, run the command 
+below to create the environment:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr
+</span></code></pre></div>
+Also make sure an update version of Fiji is installed on
+your system.</p>
 <h2 id="sections">Sections</h2>
 <hr />
-<h2 id="inspecting-and-validating-ome-zarr"><a href="inspection_overview/">Inspecting and Validating OME-Zarr</a></h2>
+<h3 id="introduction"><a href="what_is_ngff/">Introduction</a></h3>
 <hr />
-<h2 id="opening-ome-zarr"><a href="open_overview/">Opening OME-Zarr</a></h2>
+<h3 id="inspecting-and-validating-ome-zarr"><a href="inspection_overview/">Inspecting and Validating OME-Zarr</a></h3>
 <hr />
-<h2 id="saving-ome-zarr"><a href="save_overview/">Saving OME-Zarr</a></h2>
+<h3 id="opening-ome-zarr"><a href="open_overview/">Opening OME-Zarr</a></h3>
 <hr />
-<h2 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h2>
+<h3 id="saving-ome-zarr"><a href="save_overview/">Saving OME-Zarr</a></h3>
+<hr />
+<h3 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h3>
 <hr />
 
 

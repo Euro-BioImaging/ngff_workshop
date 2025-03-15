@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../validate_ome_zarr_ome-zarr-validator/">
+        <link rel="prev" href="../inspection_overview/">
       
       
-        <link rel="next" href="../open_overview/">
+        <link rel="next" href="../validate_ome_zarr_ome-zarr-validator/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#terminal" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="NGFF Workshop" class="md-header__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  <img src="../figures/logo1.png" alt="logo">
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -197,6 +202,23 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../what_is_ngff/" class="md-tabs__link">
+        
+  
+    
+  
+  Introduction to OME-Zarr
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
     
   
   
@@ -292,7 +314,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NGFF Workshop" class="md-nav__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  <img src="../figures/logo1.png" alt="logo">
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     NGFF Workshop
@@ -337,6 +359,27 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../what_is_ngff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to OME-Zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -355,10 +398,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -370,8 +413,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Inspecting and Validating OME-Zarr
           </label>
@@ -403,6 +446,140 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ome-zarr-py
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ome-zarr-py
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inspect-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect remote data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download remote data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-the-relevant-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import the relevant tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-remote-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect remote data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-remote-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download remote data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -416,36 +593,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    ome-zarr-py
-    
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -475,10 +622,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -490,8 +637,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Opening OME-Zarr
           </label>
@@ -509,28 +656,6 @@
   
   <span class="md-ellipsis">
     Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_open_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MoBIE
     
   </span>
   
@@ -592,6 +717,50 @@
   
   
     <li class="md-nav__item">
+      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    napari-ome-zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_open_mobie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MoBIE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../open_local_ome_zarr_zarr-python/" class="md-nav__link">
         
   
@@ -619,28 +788,6 @@
   
   <span class="md-ellipsis">
     ome-zarr-py
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    napari-ome-zarr
     
   </span>
   
@@ -697,10 +844,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -712,8 +859,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Saving OME-Zarr
           </label>
@@ -809,10 +956,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -824,8 +971,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Converting Data to OME-Zarr
           </label>
@@ -882,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../omet_zarr_conversion_ngff-converter/" class="md-nav__link">
+      <a href="../ome_zarr_conversion_ngff-converter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,6 +1091,89 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inspect-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect remote data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download remote data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-the-relevant-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import the relevant tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inspect-remote-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inspect remote data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-remote-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download remote data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -963,24 +1193,45 @@
 
   <h1>ome-zarr-py</h1>
 
-<p><strong>Use the ome_zarr tool for the inspecting and downloading OME-Zarrs from s3:</strong></p>
+<p><strong>Use the ome-zarr-py library for inspecting and downloading OME-Zarrs from s3</strong></p>
 <p>Remote OME-Zarr data stored in a <strong>public</strong> s3 bucket can be inspected and downloaded using 
-the <code>ome-zarr-py</code> tool. </p>
+the <code>ome-zarr-py</code> tool via <strong>terminal</strong> or <strong>Python</strong> code. </p>
+<p>Activate the conda environment <code>ngff_workshop</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>ngff_workshop
+</span></code></pre></div>
+<h3 id="terminal">Terminal</h3>
+<h4 id="inspect-remote-data">Inspect remote data</h4>
 <p>Inspect 3 different remote datasets:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/EuBI/anna_steyer0/20160112_C.elegans_std_fullhead.zarr
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/EuBI/anna_steyer0/20160112_C.elegans_std_fullhead.zarr
 </span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
 </span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
 </span></code></pre></div>
-<p><strong>Optional:</strong> Download the dataset <code>6001240.zarr</code> from s3 to a local path:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># cd ~/image_data_formats/day1/ome_zarr</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>/path/to/local/zarr<span class="w"> </span><span class="c1"># where you want to keep the data on your system</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ome_zarr<span class="w"> </span>download<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
+<h4 id="download-remote-data">Download remote data</h4>
+<p>Create a directory named <code>downloaded_omezarrs</code> in your home directory, 
+browse into it and download the dataset <code>6001240.zarr</code> from s3:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/data/downloaded_omezarrs
 </span></code></pre></div>
-<p><strong>Optional:</strong> Inspect the local dataset in the same way:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>/path/to/local/zarr/6001240.zarr
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ome_zarr<span class="w"> </span>download<span class="w"> </span>https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
+</span></code></pre></div>
+<p>Inspect the local dataset (<strong>optional</strong>):
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ome_zarr<span class="w"> </span>info<span class="w"> </span>/path/to/data/downloaded_omezarrs/6001240.zarr
 </span></code></pre></div></p>
+<h3 id="python">Python</h3>
+<p>Access Python</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python
+</span></code></pre></div>
+<h4 id="import-the-relevant-tools">Import the relevant tools</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ome_zarr</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
+</span></code></pre></div>
+<h4 id="inspect-remote-data_1">Inspect remote data</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">list</span><span class="p">(</span><span class="n">utils</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;https://uk1s3.embassy.ebi.ac.uk/EuBI/anna_steyer0/20160112_C.elegans_std_fullhead.zarr&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+<h4 id="download-remote-data_1">Download remote data</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">utils</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span> <span class="s2">&quot;https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr&quot;</span><span class="p">,</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>               <span class="n">output_dir</span> <span class="o">=</span> <span class="s2">&quot;./downloaded_omezarrs&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 
 
 
