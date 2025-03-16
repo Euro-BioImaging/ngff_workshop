@@ -1,11 +1,18 @@
-**First cd into the data directory and then access Python:** 
+**Save an array as OME-Zarr using the ome-zarr-py library.**
+
+Create a directory named `saved_omezarrs` in your home directory, 
+and browse into it.
 
 ```bash
-cd /path/to/data
+cd /path/to/data/saved_omezarrs
+```
+
+**Access Python:**
+```bash
 python
 ```
 
-### Import the relevant tools
+### Do the relevant imports
 
 ```python
 import zarr, os
@@ -72,7 +79,7 @@ url as input to the `parse_url` function.
 
 ```python
 # Specify the path where you want to write
-output_path = "data/saved/python/astronaut.zarr"
+output_path = "./saved_omezarrs/astronaut.zarr"
 # Parse the url as a zarr store. Note that "mode = 'w'" enables writing to this store.
 store = parse_url(output_path, mode = 'w').store 
 root = zarr.open_group(store)

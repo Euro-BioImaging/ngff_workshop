@@ -1,14 +1,3 @@
-<style>
-body {
-    font-size: 20px !important;
-}
-h3 {
-    font-size: 24px !important;
-}
-h4 {
-    font-size: 22px !important;
-}
-</style>
 
 
 First open an image on Fiji by dragging and dropping the czi image from your local path (eg., `/path/to/data/pff/xyz__multiple_images.czi`) as shown below: <br><br>

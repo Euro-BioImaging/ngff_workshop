@@ -1,18 +1,6 @@
-<style>
-body {
-    font-size: 20px !important;
-}
-h3 {
-    font-size: 24px !important;
-}
-h4 {
-    font-size: 22px !important;
-}
-</style>
+**Imagine that you want to open a dataset in Fiji, but it is too large to fit the RAM of your machine.**
 
 ### Opening a Remote OME-Zarr in BigDataViewer
-
-Now let's imagine the dataset you want to open is too large to fit the RAM of your machine. 
 
 Open the n5-viewer in Fiji via: 
 

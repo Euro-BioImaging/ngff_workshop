@@ -2,7 +2,7 @@ site_name: NGFF Workshop
 repo_url: https://github.com/Euro-BioImaging/ngff_workshop
 theme:
   name: material
-  logo: figures/logo1.png
+  logo: figures/logo.png
 #  palette:
 #    scheme: default
   features:
@@ -10,23 +10,26 @@ theme:
     - navigation.tracking
     - content.code.copy
     - header.autohide  # (optional: hides header on scroll for more space)
+    - footer.hide
+
 extra_css:
   - stylesheets/extra.css
 
 nav:
   - Home: index.md
+  - Introduction to OME-Zarr: what_is_ngff.md
   - Inspecting and Validating OME-Zarr:
       - "Overview": inspection_overview.md
-      - "OME-Zarr Validator": validate_ome_zarr_ome-zarr-validator.md
       - "ome-zarr-py": ome_zarr_inspection_ome-zarr-py.md
+      - "OME-Zarr Validator": validate_ome_zarr_ome-zarr-validator.md
   - Opening OME-Zarr:
       - "Overview": open_overview.md
-      - "MoBIE": ome_zarr_open_mobie.md
       - "n5-ij": ome_zarr_open_java_n5-ij.md
       - "n5-viewer": ome_zarr_open_java_n5-viewer.md
+      - "napari-ome-zarr": ome_zarr_visualisation_napari.md
+      - "MoBIE": ome_zarr_open_mobie.md
       - "zarr-python": open_local_ome_zarr_zarr-python.md
       - "ome-zarr-py": open_ome_zarr_ome-zarr-py.md
-      - "napari-ome-zarr": ome_zarr_visualisation_napari.md
       - "Web-based viewers": web_based_viewers.md
   - Saving OME-Zarr:
       - "Overview": save_overview.md
@@ -35,7 +38,7 @@ nav:
   - Converting Data to OME-Zarr:
       - "Overview": conversion_overview.md
       - "EuBI-Bridge": ome_zarr_creation_EuBI-Bridge.md
-      - "NGFF-Converter": omet_zarr_conversion_ngff-converter.md
+      - "NGFF-Converter": ome_zarr_conversion_ngff-converter.md
       - "BatchConvert": ome_zarr_creation_BatchConvert.md
 
 plugins:

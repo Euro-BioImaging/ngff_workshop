@@ -1,11 +1,18 @@
-**First cd into the data directory and then access Python:** 
+Activate the conda environment `ngff_workshop`:
 
 ```bash
-cd /path/to/data
+conda activate ngff_workshop
+```
+
+**Browse into the example data directory and then access Python:** 
+
+```bash
+cd /path/to/example_omezarrs
 python
 ```
 
 ### Import the relevant tools
+
 ```python
 import zarr, os, pprint
 import numpy as np

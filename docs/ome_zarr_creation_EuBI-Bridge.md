@@ -1,8 +1,14 @@
 **Perform parallelised conversion of image data collections to OME-Zarr using EuBI-Bridge**
 
-First cd into the directory with the example datasets: 
+On the terminal browse into the directory named `example_images`: 
 
-`cd /path/to/data`
+`cd /path/to/data/example_images`
+
+Activate the conda environment `ngff_workshop`:
+
+```bash
+conda activate ngff_workshop
+```
 
 ### Unary Conversion  
 
@@ -88,17 +94,22 @@ multichannel_timeseries_nested_concat-ct_zarr
 ### Selective Data Conversion Using Wildcards  
 
 To process only specific files, wildcards can be used. 
-For example, to concatenate only **timepoint 3** along the channel dimension:  
+For example, to concatenate only lsm images from the `pff` directory:  
 
 ```shell
-eubi to_zarr "multichannel_timeseries_nested/**/*T0003*" multichannel_timeseries_nested_concat-wildcards_zarr --channel_tag Channel --time_tag T --concatenation_axes c
+eubi to_zarr "pff/*.lsm" lsm_to_zarr
 ```  
+
+**Note:** When using wildcards, the input directory path must be enclosed in quotes as shown in the example above.  
 
 Output:  
 
-<div style="font-family: monospace;"> <span style="color: black;">📂 multichannel_timeseries_nested_concat-wildcards_zarr</span><br> └── <span style="color: purple;">📄 Channel_cset-T0003.zarr</span><br> </div>
+<div style="font-family: monospace;"> 
+  <span style="color: black;">📂 lsm_to_zarr</span><br> 
+  ├── <span style="color: blue;">📁 FtsZ2-1_GFP_KO2-1_no10G.zarr</span><br> 
+  └── <span style="color: blue;">📁 FtsZ2-1_GFP_KO2-1_no16G.zarr</span> 
+</div>
 
-**Note:** When using wildcards, the input directory path must be enclosed in quotes as shown in the example above.  
 
 ### Handling Categorical Dimension Patterns  
 
@@ -132,5 +143,12 @@ Output:
 ### Extraction of Single Series from a Multi-series Dataset
 
 ```shell
-eubi to_zarr pff/17_03_18.lif lif_series_31 --series 31 --no_distributed True
+eubi to_zarr pff/17_03_18.lif lif_series_to_zarr --series 21 --no_distributed True
 ```
+
+Output:  
+
+<div style="font-family: monospace;"> 
+  <span style="color: black;">📂 lif_series_to_zarr</span><br> 
+   └── <span style="color: purple;">📁 17_03_18.lif-17_03_18_FtsZ2-2_no11.zarr</span><br> 
+</div>

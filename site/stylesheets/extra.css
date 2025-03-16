@@ -1,0 +1,4 @@
+.md-header__button.md-logo img {
+    height: 87px;  /* Adjust this value */
+    margin-top: -10px;  /* Move up by 5px */
+}

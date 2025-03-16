@@ -1,40 +1,25 @@
-**First cd into the data directory and then access Python:** 
+Activate the conda environment `ngff_workshop`:
 
 ```bash
-cd /path/to/data
+conda activate ngff_workshop
+```
+
+**Browse into the example data directory and then access Python:** 
+
+```bash
+cd /path/to/example_omezarrs
 python
 ```
 
-### Import the relevant tools
+### Import the relevant tools 
 
 ```python
 import ome_zarr, zarr, pprint, os
-from ome_zarr import utils
 from ome_zarr.reader import Reader
 from ome_zarr.io import parse_url
 ```
 
-### Inspect, download or validate OME-Zarrs
-
-Inspect:
-```python
-list(utils.info("https://uk1s3.embassy.ebi.ac.uk/EuBI/anna_steyer0/20160112_C.elegans_std_fullhead.zarr"))
-```
-
-Download:
-```python
-utils.download(input_path = "https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr",
-               output_dir = "./downloaded/zarr")
-```
-
-Validate:
-```python
-utils.view(input_path = "./downloaded/6001240.zarr")
-```
-
-Note that the validation can be directly performed on the remote data by using the browser directly.
-
-### Read remote local and remote OME-Zarrs
+### Read local and remote OME-Zarrs
 
 ```python
 # local_path = "./6001240.zarr"

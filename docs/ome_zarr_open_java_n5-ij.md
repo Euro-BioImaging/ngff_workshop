@@ -1,14 +1,4 @@
-<style>
-body {
-    font-size: 20px !important;
-}
-h3 {
-    font-size: 24px !important;
-}
-h4 {
-    font-size: 22px !important;
-}
-</style>
+Here we cover how to open OME-Zarr as a Fiji image.
 
 ### Open a remote OME-Zarr in Fiji
 

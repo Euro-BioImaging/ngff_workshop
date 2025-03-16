@@ -9,18 +9,18 @@
       
       
       
-        <link rel="prev" href="../open_overview/">
+        <link rel="prev" href="../open_ome_zarr_ome-zarr-py/">
       
       
-        <link rel="next" href="../ome_zarr_open_java_n5-ij/">
+        <link rel="next" href="../save_overview/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
-        <title>Mobie - NGFF Workshop</title>
+        <title>Web-based viewers - NGFF Workshop</title>
       
     
     
@@ -42,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -70,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#vizarr-2d-channels" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,8 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="NGFF Workshop" class="md-header__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mobie
+              Web-based viewers
             
           </span>
         </div>
@@ -151,7 +157,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -197,17 +203,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../conversion_overview/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../what_is_ngff/" class="md-tabs__link">
+        
   
-  Converting Data to OME-Zarr
-
-        </a>
-      </li>
     
+  
+  Introduction to OME-Zarr
+
+      </a>
+    </li>
   
 
       
@@ -267,6 +272,24 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../conversion_overview/" class="md-tabs__link">
+          
+  
+  Converting Data to OME-Zarr
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -291,15 +314,14 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NGFF Workshop" class="md-nav__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     NGFF Workshop
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -339,130 +361,17 @@
   
   
   
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Converting Data to OME-Zarr
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Converting Data to OME-Zarr
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../conversion_overview/" class="md-nav__link">
+      <a href="../what_is_ngff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overview
+    Introduction to OME-Zarr
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    EuBI-Bridge
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../omet_zarr_conversion_ngff-converter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NGFF-Converter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_creation_BatchConvert/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    BatchConvert
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -535,11 +444,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
+      <a href="../ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OME-Zarr Validator
+    ome-zarr-py
     
   </span>
   
@@ -557,11 +466,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
+      <a href="../validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ome-zarr-py
+    OME-Zarr Validator
     
   </span>
   
@@ -649,36 +558,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Mobie
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -709,6 +588,50 @@
   
   <span class="md-ellipsis">
     n5-viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    napari-ome-zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_open_mobie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MoBIE
     
   </span>
   
@@ -767,151 +690,101 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Web-based viewers
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    napari-ome-zarr
+    Web-based viewers
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_bia/" class="md-nav__link">
+      
         
-  
-  <span class="md-ellipsis">
-    S3 Visualization (BIA)
-    
-  </span>
-  
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
   
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_itk_viewer/" class="md-nav__link">
-        
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vizarr-2d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vizarr (2D + Channels)
+    </span>
+  </a>
   
-  <span class="md-ellipsis">
-    ITK Viewer
-    
-  </span>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itk-vtk-viewer-3d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      itk-vtk-viewer (3D + channels)
+    </span>
+  </a>
   
-
-      </a>
-    </li>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allen-3d-volume-viewer-4d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allen 3D Volume Viewer (4D + channels)
+    </span>
+  </a>
   
-
-              
-            
-              
-                
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuroglancer-2d-channels-volume-rendering-experimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuroglancer (2D + channels, volume rendering experimental)
+    </span>
+  </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bioimage-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      BioImage Archive
+    </span>
+  </a>
   
+</li>
+      
+    </ul>
   
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mobie for s3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_neuroglancer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Neuroglancer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_vizarr/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vizarr
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_webknossos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Webknossos
-    
-  </span>
-  
-
-      </a>
+</nav>
+      
     </li>
   
 
@@ -1036,6 +909,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Converting Data to OME-Zarr
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Converting Data to OME-Zarr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversion_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EuBI-Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_conversion_ngff-converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NGFF-Converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_creation_BatchConvert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BatchConvert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1054,6 +1061,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vizarr-2d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vizarr (2D + Channels)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itk-vtk-viewer-3d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      itk-vtk-viewer (3D + channels)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allen-3d-volume-viewer-4d-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Allen 3D Volume Viewer (4D + channels)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neuroglancer-2d-channels-volume-rendering-experimental" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuroglancer (2D + channels, volume rendering experimental)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bioimage-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      BioImage Archive
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1071,17 +1131,56 @@
   
 
 
-  <h1>Mobie</h1>
+  <h1>Web-based viewers</h1>
 
+<h3 id="vizarr-2d-channels">Vizarr (2D + Channels)</h3>
+<p>Create a link by pasting the address of the dataset after the <code>=</code>
+in the following link:<br></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://hms-dbmi.github.io/vizarr/?source<span class="o">=</span>
+</span></code></pre></div>
+<p>For example, paste the following address:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0
+</span></code></pre></div></p>
+<p>Thus construct the following link:<br>
+<a href="https://hms-dbmi.github.io/vizarr/?source=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0">https://hms-dbmi.github.io/vizarr/?source=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0</a></p>
+<p>Click on it or paste it in the browser to open the viewer.</p>
+<h3 id="itk-vtk-viewer-3d-channels">itk-vtk-viewer (3D + channels)</h3>
+<p>Create a link by pasting the address of the dataset after the <code>=</code>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://kitware.github.io/itk-vtk-viewer/app/?fileToLoad<span class="o">=</span>
+</span></code></pre></div></p>
+<p>For example, paste the following address:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0
+</span></code></pre></div></p>
+<p>Thus construct the following link:<br>
+<a href="https://kitware.github.io/itk-vtk-viewer/app/?fileToLoad=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0">https://kitware.github.io/itk-vtk-viewer/app/?fileToLoad=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0</a></p>
+<p>Click on it or paste it in the browser to open the viewer.</p>
+<h3 id="allen-3d-volume-viewer-4d-channels">Allen 3D Volume Viewer (4D + channels)</h3>
+<p>Create a link by pasting the address of the dataset after the <code>=</code><br>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>https://volumeviewer.allencell.org/viewer?url<span class="o">=</span>
+</span></code></pre></div></p>
+<p>For example, paste the following address:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0
+</span></code></pre></div></p>
+<p>Thus create the following link:<br>
+<a href="https://volumeviewer.allencell.org/viewer?url=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0">https://volumeviewer.allencell.org/viewer?url=https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/S-BSST410/IM2/IM2.zarr/0</a></p>
+<p>Click on it or paste it in the browser to open the viewer.</p>
+<h3 id="neuroglancer-2d-channels-volume-rendering-experimental">Neuroglancer (2D + channels, volume rendering experimental)</h3>
 <ul>
-<li><a href="https://github.com/mobie/mobie-viewer-fiji#install">Open Fiji with MoBIE</a></li>
-<li>[ Plugins &gt; MoBIE &gt; Open &gt; Open OME ZARR... ]<ul>
-<li><code>Image URI</code>: <code>https://s3.embl.de/i2k-2020/platy-raw.ome.zarr</code></li>
-<li><code>( Labels URI )</code>: <code>https://s3.embl.de/i2k-2020/platy-raw.ome.zarr/labels/cells</code></li>
-<li><code>( Labels Table URI )</code>: TODO</li>
+<li>Go to <a href="https://neuroglancer-demo.appspot.com/">https://neuroglancer-demo.appspot.com/</a><br></li>
+<li>On to top right in <code>Source</code>, paste the following: 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>zarr://https://s3.embl.de/i2k-2020/platy-raw.ome.zarr
+</span></code></pre></div></li>
+<li>Press Enter (multiple times). <br></li>
+<li>Navigate around in the sample <br></li>
+<li>Zoom in/out: <code>ctrl + mouse scroll</code><br></li>
+<li>Neuroglancer enables sharing of views. The URL in your browser adapts
+to your current view. Simply copy and paste the URL to share a view with a collaborator</li>
 </ul>
-</li>
-</ul>
+<h3 id="bioimage-archive">BioImage Archive</h3>
+<p>The BioImage Archive also provides visualisations for the datasets they store, using the tools discussed above. 
+Click on the link below to see an example.<br>
+<a href="https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/pages/S-BSST410/IM2.html">https://uk1s3.embassy.ebi.ac.uk/bia-integrator-data/pages/S-BSST410/IM2.html</a><br>
+An advantage of the BioImage Archive is that they also provide a range of image metadata along with the visualisation.</p>
 
 
 
@@ -1128,7 +1227,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "header.autohide", "footer.hide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

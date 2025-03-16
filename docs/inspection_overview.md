@@ -1,7 +1,7 @@
-Inspect and validate OME-Zarr datasets
-
+Inspect and validate local (file system) and remote (S3 object store) OME-Zarr data
 
 ### Modules
 
-- [OME-Zarr Validator](validate_ome_zarr_ome-zarr-validator.md)
 - [ome-zarr-py](ome_zarr_inspection_ome-zarr-py.md)
+- [OME-Zarr Validator](validate_ome_zarr_ome-zarr-validator.md)
+

@@ -1,7 +1,26 @@
-**Open the OME-Zarr validator with local data using ome-zarr-py from the command line:**
+**Validate local and remote OME-Zarrs using the
+OME-Zarr validator.**
+
+### Validate local data
+
+#### Terminal
+
+Activate the conda environment `ngff_workshop`:
 
 ```bash
-ome_zarr view /path/to/local/omezarr # eg: ~/image_data_course/data/zarr/6001240.zarr
+conda activate ngff_workshop
+```
+
+**Browse into the example data directory** 
+
+```bash
+cd /path/to/example_omezarrs
+```
+
+Validate one of the example OME-Zarrs:
+
+```bash
+ome_zarr view /path/to/example_omezarrs/6001240.zarr
 ```
 
 The validator will open in a web browser and demonstrate various metadata fields
@@ -11,7 +30,28 @@ of the OME-Zarr dataset.
 * Check the array and chunk shapes and bytes per resolution level.
 * Visualize a single chunk.
 
-**Now do the same but with remote data:**
+
+#### Python
+
+Make sure the environment `ngff_workshop` is active
+and you are in the `example_omezarrs` folder.
+
+Then access Python:
+
+```bash
+python
+```
+
+Do the relevant imports and validate the dataset:
+```python
+from ome_zarr import utils
+utils.view(input_path = "./6001240.zarr")
+```
+
+
+### Validate remote data
+
+Now the aim is to validate the remotely stored version of the same dataset.
 
 Enter the following into your browser: 
 
@@ -31,3 +71,7 @@ Thus construct the following link:
 
 Note that with the remote url it is possible to copy the link from your browser and share it with 
 your colleagues.
+
+
+
+

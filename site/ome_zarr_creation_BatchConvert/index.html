@@ -9,14 +9,12 @@
       
       
       
-        <link rel="prev" href="../omet_zarr_conversion_ngff-converter/">
+        <link rel="prev" href="../ome_zarr_conversion_ngff-converter/">
       
-      
-        <link rel="next" href="../inspection_overview/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
@@ -42,6 +40,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#perform-parallelised-conversion-of-image-data-collections-to-ome-zarr-using-batchconvert" class="md-skip">
+        <a href="#unary-conversion" class="md-skip">
           Skip to content
         </a>
       
@@ -87,8 +87,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="NGFF Workshop" class="md-header__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -156,7 +155,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -201,20 +200,17 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../what_is_ngff/" class="md-tabs__link">
+        
+  
     
   
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conversion_overview/" class="md-tabs__link">
-          
-  
-  Converting Data to OME-Zarr
+  Introduction to OME-Zarr
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -272,6 +268,26 @@
   
 
       
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conversion_overview/" class="md-tabs__link">
+          
+  
+  Converting Data to OME-Zarr
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -296,15 +312,14 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NGFF Workshop" class="md-nav__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     NGFF Workshop
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -342,183 +357,19 @@
       
   
   
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Converting Data to OME-Zarr
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Converting Data to OME-Zarr
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../conversion_overview/" class="md-nav__link">
+      <a href="../what_is_ngff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overview
+    Introduction to OME-Zarr
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    EuBI-Bridge
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../omet_zarr_conversion_ngff-converter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NGFF-Converter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    BatchConvert
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    BatchConvert
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#perform-parallelised-conversion-of-image-data-collections-to-ome-zarr-using-batchconvert" class="md-nav__link">
-    <span class="md-ellipsis">
-      Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -591,11 +442,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
+      <a href="../ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OME-Zarr Validator
+    ome-zarr-py
     
   </span>
   
@@ -613,11 +464,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_inspection_ome-zarr-py/" class="md-nav__link">
+      <a href="../validate_ome_zarr_ome-zarr-validator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ome-zarr-py
+    OME-Zarr Validator
     
   </span>
   
@@ -703,28 +554,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_open_java_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mobie
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ome_zarr_open_java_n5-ij/" class="md-nav__link">
         
   
@@ -752,6 +581,50 @@
   
   <span class="md-ellipsis">
     n5-viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    napari-ome-zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_open_mobie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MoBIE
     
   </span>
   
@@ -813,143 +686,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+      <a href="../web_based_viewers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    napari-ome-zarr
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_bia/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    S3 Visualization (BIA)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_itk_viewer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ITK Viewer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mobie for s3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_neuroglancer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Neuroglancer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_vizarr/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vizarr
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_webknossos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Webknossos
+    Web-based viewers
     
   </span>
   
@@ -1079,6 +820,209 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Converting Data to OME-Zarr
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Converting Data to OME-Zarr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversion_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EuBI-Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_conversion_ngff-converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NGFF-Converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BatchConvert
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BatchConvert
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unary-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unary conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregative-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregative conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregative-conversion-with-specific-chunking-downscaling-and-compression-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregative conversion with specific chunking, downscaling and compression parameters
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1104,9 +1048,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#perform-parallelised-conversion-of-image-data-collections-to-ome-zarr-using-batchconvert" class="md-nav__link">
+  <a href="#unary-conversion" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert
+      Unary conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregative-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregative conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregative-conversion-with-specific-chunking-downscaling-and-compression-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregative conversion with specific chunking, downscaling and compression parameters
     </span>
   </a>
   
@@ -1133,11 +1095,11 @@
 
   <h1>BatchConvert</h1>
 
-<h4 id="perform-parallelised-conversion-of-image-data-collections-to-ome-zarr-using-batchconvert">Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert</h4>
+<p>Perform parallelised conversion of image data collections to OME-Zarr using BatchConvert</p>
 <p><strong>Important note: BatchConvert is currently only supported on unix-based systems</strong></p>
 <p>As input, use the <code>tiff_series</code> dataset.</p>
-<p><strong>Perform parallelised, independent conversion:</strong>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>batchconvert<span class="w"> </span>omezarr<span class="w"> </span><span class="se">\</span>
+<h3 id="unary-conversion">Unary conversion</h3>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>batchconvert<span class="w"> </span>omezarr<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>/path/to/tiff_series<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>/path/to/output_dir<span class="w"> </span>
 </span></code></pre></div>
@@ -1147,7 +1109,7 @@ which is then transferred to the <code>output_dir</code> folder.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ls<span class="w"> </span>/path/to/output_dir
 </span></code></pre></div>
 Optional: Inspect the created OME-Zarr. </p>
-<p><strong>Perform grouped conversion:</strong></p>
+<h3 id="aggregative-conversion">Aggregative conversion</h3>
 <p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>batchconvert<span class="w"> </span>omezarr<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>--merge_files<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>/path/to/tiff_series<span class="w"> </span><span class="se">\</span>
@@ -1159,7 +1121,7 @@ The <code>--merge_files</code> flag specifies the grouped conversion option.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w"> </span>/path/to/concatenated_output_dir
 </span></code></pre></div>
 Optional: Inspect the created OME-Zarr. </p>
-<p><strong>Perform grouped conversion with specific chunking, downscaling and compression parameters:</strong></p>
+<h3 id="aggregative-conversion-with-specific-chunking-downscaling-and-compression-parameters">Aggregative conversion with specific chunking, downscaling and compression parameters</h3>
 <p><div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>batchconvert<span class="w"> </span>omezarr<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>--merge_files<span class="w"> </span><span class="se">\</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>--compression_zarr<span class="w"> </span>zlib<span class="w"> </span><span class="se">\</span>
@@ -1222,7 +1184,7 @@ Optional: Inspect the created OME-Zarr. Compare it to the one created earlier.</
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "header.autohide", "footer.hide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>

@@ -9,14 +9,14 @@
       
       
       
-        <link rel="prev" href="../inspection_overview/">
+        <link rel="prev" href="../ome_zarr_inspection_ome-zarr-py/">
       
       
-        <link rel="next" href="../ome_zarr_inspection_ome-zarr-py/">
+        <link rel="next" href="../open_overview/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
@@ -42,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -70,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#validate-local-data" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,8 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="NGFF Workshop" class="md-header__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -151,7 +157,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -197,17 +203,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../conversion_overview/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../what_is_ngff/" class="md-tabs__link">
+        
   
-  Converting Data to OME-Zarr
-
-        </a>
-      </li>
     
+  
+  Introduction to OME-Zarr
+
+      </a>
+    </li>
   
 
       
@@ -267,6 +272,24 @@
   
 
       
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../conversion_overview/" class="md-tabs__link">
+          
+  
+  Converting Data to OME-Zarr
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -291,15 +314,14 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NGFF Workshop" class="md-nav__button md-logo" aria-label="NGFF Workshop" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../figures/logo.png" alt="logo">
 
     </a>
     NGFF Workshop
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/YOUR_GITHUB_USERNAME/ome-zarr-tutorial" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/Euro-BioImaging/ngff_workshop" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -339,130 +361,17 @@
   
   
   
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Converting Data to OME-Zarr
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Converting Data to OME-Zarr
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../conversion_overview/" class="md-nav__link">
+      <a href="../what_is_ngff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Overview
+    Introduction to OME-Zarr
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    EuBI-Bridge
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../omet_zarr_conversion_ngff-converter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    NGFF-Converter
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_creation_BatchConvert/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    BatchConvert
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -537,36 +446,6 @@
                 
   
   
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    OME-Zarr Validator
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -580,6 +459,107 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OME-Zarr Validator
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    OME-Zarr Validator
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#validate-local-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate local data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate local data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate remote data
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -660,28 +640,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_open_java_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mobie
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../ome_zarr_open_java_n5-ij/" class="md-nav__link">
         
   
@@ -709,6 +667,50 @@
   
   <span class="md-ellipsis">
     n5-viewer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    napari-ome-zarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_open_mobie/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MoBIE
     
   </span>
   
@@ -770,143 +772,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_napari/" class="md-nav__link">
+      <a href="../web_based_viewers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    napari-ome-zarr
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_bia/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    S3 Visualization (BIA)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_itk_viewer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ITK Viewer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_mobie/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mobie for s3
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_neuroglancer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Neuroglancer
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_vizarr/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Vizarr
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ome_zarr_visualisation_s3_webknossos/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Webknossos
+    Web-based viewers
     
   </span>
   
@@ -1036,6 +906,140 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Converting Data to OME-Zarr
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Converting Data to OME-Zarr
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversion_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EuBI-Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_conversion_ngff-converter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NGFF-Converter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ome_zarr_creation_BatchConvert/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BatchConvert
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1053,6 +1057,56 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#validate-local-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate local data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate local data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-remote-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validate remote data
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1073,8 +1127,18 @@
 
   <h1>OME-Zarr Validator</h1>
 
-<p><strong>Open the OME-Zarr validator with local data using ome-zarr-py from the command line:</strong></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ome_zarr<span class="w"> </span>view<span class="w"> </span>/path/to/local/omezarr<span class="w"> </span><span class="c1"># eg: ~/image_data_course/data/zarr/6001240.zarr</span>
+<p><strong>Validate local and remote OME-Zarrs using the
+OME-Zarr validator.</strong></p>
+<h3 id="validate-local-data">Validate local data</h3>
+<h4 id="terminal">Terminal</h4>
+<p>Activate the conda environment <code>ngff_workshop</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>ngff_workshop
+</span></code></pre></div>
+<p><strong>Browse into the example data directory</strong> </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/example_omezarrs
+</span></code></pre></div>
+<p>Validate one of the example OME-Zarrs:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ome_zarr<span class="w"> </span>view<span class="w"> </span>/path/to/example_omezarrs/6001240.zarr
 </span></code></pre></div>
 <p>The validator will open in a web browser and demonstrate various metadata fields
 of the OME-Zarr dataset.</p>
@@ -1083,9 +1147,25 @@ of the OME-Zarr dataset.</p>
 <li>Check the array and chunk shapes and bytes per resolution level.</li>
 <li>Visualize a single chunk.</li>
 </ul>
-<p><strong>Now do the same but with remote data:</strong></p>
-<p>Enter the following into your browser: <code>https://ome.github.io/ome-ngff-validator/?source=</code></p>
-<p>Then paste the dataset url after the 'equal' sign, constructing the following link: </p>
+<h4 id="python">Python</h4>
+<p>Make sure the environment <code>ngff_workshop</code> is active
+and you are in the <code>example_omezarrs</code> folder.</p>
+<p>Then access Python:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python
+</span></code></pre></div>
+<p>Do the relevant imports and validate the dataset:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ome_zarr</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">utils</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">input_path</span> <span class="o">=</span> <span class="s2">&quot;./6001240.zarr&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="validate-remote-data">Validate remote data</h3>
+<p>Now the aim is to validate the remotely stored version of the same dataset.</p>
+<p>Enter the following into your browser: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>https://ome.github.io/ome-ngff-validator/?source<span class="o">=</span>
+</span></code></pre></div>
+<p>Then paste the following dataset url after the 'equal' sign: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr
+</span></code></pre></div>
+<p>Thus construct the following link: </p>
 <p><a href="https://ome.github.io/ome-ngff-validator/?source=https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr">https://ome.github.io/ome-ngff-validator/?source=https://uk1s3.embassy.ebi.ac.uk/idr/zarr/v0.4/idr0062A/6001240.zarr</a> </p>
 <p>Note that with the remote url it is possible to copy the link from your browser and share it with 
 your colleagues.</p>
@@ -1135,7 +1215,7 @@ your colleagues.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tracking", "content.code.copy", "header.autohide", "footer.hide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
