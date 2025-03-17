@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unary-conversion" class="md-skip">
+        <a href="#configure-the-memory-limit" class="md-skip">
           Skip to content
         </a>
       
@@ -939,6 +939,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configure-the-memory-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the memory limit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unary-conversion" class="md-nav__link">
     <span class="md-ellipsis">
       Unary Conversion
@@ -1077,6 +1086,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configure-the-memory-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the memory limit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unary-conversion" class="md-nav__link">
     <span class="md-ellipsis">
       Unary Conversion
@@ -1157,6 +1175,9 @@
 <p>Activate the conda environment <code>ngff_workshop</code>:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>ngff_workshop
 </span></code></pre></div>
+<h3 id="configure-the-memory-limit">Configure the memory limit</h3>
+<p>eubi configure_cluster --memory_limit 5GB
+eubi show_config</p>
 <h3 id="unary-conversion">Unary Conversion</h3>
 <p>Given a dataset structured as follows:  </p>
 <div style="font-family: monospace;"> <span style="color: black;">📂 multichannel_timeseries</span><br> ├── <span style="color: blue;">📄 Channel1-T0001.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0002.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0003.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0004.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0001.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0002.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0003.tif</span><br> └── <span style="color: red;">📄 Channel2-T0004.tif</span><br> </div>
