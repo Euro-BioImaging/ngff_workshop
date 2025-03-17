@@ -1176,14 +1176,15 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>ngff_workshop
 </span></code></pre></div>
 <h3 id="configure-the-memory-limit">Configure the memory limit</h3>
-<p>eubi configure_cluster --memory_limit 5GB
-eubi show_config</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>eubi<span class="w"> </span>configure_cluster<span class="w"> </span>--memory_limit<span class="w"> </span>5GB
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>eubi<span class="w"> </span>show_config
+</span></code></pre></div>
 <h3 id="unary-conversion">Unary Conversion</h3>
 <p>Given a dataset structured as follows:  </p>
 <div style="font-family: monospace;"> <span style="color: black;">📂 multichannel_timeseries</span><br> ├── <span style="color: blue;">📄 Channel1-T0001.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0002.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0003.tif</span><br> ├── <span style="color: blue;">📄 Channel1-T0004.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0001.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0002.tif</span><br> ├── <span style="color: red;">📄 Channel2-T0003.tif</span><br> └── <span style="color: red;">📄 Channel2-T0004.tif</span><br> </div>
 
 <p>To convert each TIFF into a separate OME-Zarr container (unary conversion):  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_zarr
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_zarr
 </span></code></pre></div>
 <p>This produces:  </p>
 <div style="font-family: monospace;"> <span style="color: black;">📂 multichannel_timeseries_zarr</span><br> ├── <span style="color: blue;">📄 Channel1-T0001.zarr</span><br> ├── <span style="color: blue;">📄 Channel1-T0002.zarr</span><br> ├── <span style="color: blue;">📄 Channel1-T0003.zarr</span><br> ├── <span style="color: blue;">📄 Channel1-T0004.zarr</span><br> ├── <span style="color: red;">📄 Channel2-T0001.zarr</span><br> ├── <span style="color: red;">📄 Channel2-T0002.zarr</span><br> ├── <span style="color: red;">📄 Channel2-T0003.zarr</span><br> └── <span style="color: red;">📄 Channel2-T0004.zarr</span><br> </div>
@@ -1194,7 +1195,7 @@ of file patterns that specify image dimensions. For this example,
 the file pattern for the channel dimension is <code>Channel</code>, which is followed by the channel index,
 and the file pattern for the time dimension is <code>T</code>, which is followed by the time index.</p>
 <p>For concatenation along the time dimension:</p>
-<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_concat-t_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>t
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_concat-t_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>t
 </span></code></pre></div>
 Output:  </p>
 <div style="font-family: monospace;"> <span style="color: black;">📂 multichannel_timeseries_time_concat-t_zarr</span><br> ├── <span style="color: blue;">📄 Channel1-T_tset.zarr</span><br> └── <span style="color: red;">📄 Channel2-T_tset.zarr</span><br> </div>
@@ -1203,7 +1204,7 @@ Output:  </p>
 of the multiple channels in the image and try to concatenate all images into a single one-channeled OME-Zarr. Therefore, 
 when an aggregative conversion is performed, all dimensions existing in the input files must be specified via their respective tags. </p>
 <p>For multidimensional concatenation (channel + time):</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries<span class="w"> </span>multichannel_timeseries_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
 </span></code></pre></div>
 <p>Note that both axes are specified with the argument <code>--concatenation_axes ct</code>.</p>
 <p>Output:  </p>
@@ -1226,16 +1227,16 @@ when an aggregative conversion is performed, all dimensions existing in the inpu
 </div>
 
 <p>EuBI-Bridge automatically detects the nested structure. For multidimensional concatenation:  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries_nested<span class="w"> </span>multichannel_timeseries_nested_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>multichannel_timeseries_nested<span class="w"> </span>multichannel_timeseries_nested_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Channel<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
 </span></code></pre></div>
 <p>Output:  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>multichannel_timeseries_nested_concat-ct_zarr
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>└──<span class="w"> </span>Channel_cset-T_tset.zarr
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>multichannel_timeseries_nested_concat-ct_zarr
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>└──<span class="w"> </span>Channel_cset-T_tset.zarr
 </span></code></pre></div>
 <h3 id="selective-data-conversion-using-wildcards">Selective Data Conversion Using Wildcards</h3>
 <p>To process only specific files, wildcards can be used. 
 For example, to concatenate only lsm images from the <code>pff</code> directory:  </p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span><span class="s2">&quot;pff/*.lsm&quot;</span><span class="w"> </span>lsm_to_zarr
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span><span class="s2">&quot;pff/*.lsm&quot;</span><span class="w"> </span>lsm_to_zarr
 </span></code></pre></div>
 <p><strong>Note:</strong> When using wildcards, the input directory path must be enclosed in quotes as shown in the example above.  </p>
 <p>Output:  </p>
@@ -1262,13 +1263,13 @@ For example, to concatenate only lsm images from the <code>pff</code> directory:
 </div>
 
 <p>One can run the exact same command:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>blueredchannels_timeseries_nested<span class="w"> </span>blueredchannels_timeseries_nested_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Blue,Red<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>blueredchannels_timeseries_nested<span class="w"> </span>blueredchannels_timeseries_nested_concat-ct_zarr<span class="w"> </span>--channel_tag<span class="w"> </span>Blue,Red<span class="w"> </span>--time_tag<span class="w"> </span>T<span class="w"> </span>--concatenation_axes<span class="w"> </span>ct
 </span></code></pre></div>
 <p>Output:  </p>
 <div style="font-family: monospace;"> <span style="color: black;">📂 blueredchannels_timeseries_nested_concat-ct_zarr</span><br> └── <span style="color: purple;">📄 BlueRed_cset-T_tset.zarr</span><br> </div>
 
 <h3 id="extraction-of-single-series-from-a-multi-series-dataset">Extraction of Single Series from a Multi-series Dataset</h3>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>pff/17_03_18.lif<span class="w"> </span>lif_series_to_zarr<span class="w"> </span>--series<span class="w"> </span><span class="m">21</span><span class="w"> </span>--no_distributed<span class="w"> </span>True
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>eubi<span class="w"> </span>to_zarr<span class="w"> </span>pff/17_03_18.lif<span class="w"> </span>lif_series_to_zarr<span class="w"> </span>--series<span class="w"> </span><span class="m">21</span><span class="w"> </span>--no_distributed<span class="w"> </span>True
 </span></code></pre></div>
 <p>Output:  </p>
 <div style="font-family: monospace;"> 
