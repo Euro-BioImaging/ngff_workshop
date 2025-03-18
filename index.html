@@ -414,6 +414,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fiji-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiji Installation
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1142,6 +1151,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#fiji-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiji Installation
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1243,17 +1261,24 @@ specifications. These changes are, however, not covered or discussed here.</p>
 Please download the <a href="https://drive.google.com/drive/folders/1anU59y7pvHVqtXNV-yKBz-UdotOjNNY1?usp=sharing">zip file</a> 
 and extract the datasets to a convenient directory.</p>
 <h3 id="installation-of-the-tools">Installation of the tools</h3>
-<p>The easiest way to install the tools is by using 
-<code>mamba</code>. If you do not have mamba on your system already,
-you can acquire it via miniforge. Please follow the instructions <a href="https://github.com/conda-forge/miniforge">here</a>
-to set up miniforge on your system. Once you have miniforge,
-you will have mamba available on your termial.</p>
-<p>Then you can run the following command to create the environment:
+<p>The easiest way to install the required tools is via mamba.
+Installing Mamba</p>
+<p>If you do not already have mamba installed, you can acquire it via Miniforge.
+Follow the instructions here to set up Miniforge on your system.</p>
+<ul>
+<li><strong>Unix-based systems (Linux/macOS)</strong>: Installing Miniforge will make the mamba command available in your terminal.</li>
+<li><strong>Windows</strong>: Miniforge installation will set up a new command prompt called Miniforge Prompt. You can find it by typing "Miniforge" in the Windows search bar. The mamba command will be available in this prompt.</li>
+</ul>
+<p>Setting Up the Workshop Environment</p>
+<p>Once mamba is installed, run the following commands to clean up any existing package cache and create the environment:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mamba<span class="w"> </span>clean<span class="w"> </span>--all
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr<span class="w"> </span><span class="nv">pyqt</span><span class="o">=</span><span class="m">5</span>.*
-</span></code></pre></div></p>
-<p>Also make sure an up-to-date version of Fiji is installed on
-your system.</p>
+</span></code></pre></div>
+<strong>⚠️ Important: older installations of conda may be too slow to create the environment, especially
+with weak internet connection. So it is strongly recommended to install miniforge.</strong></p>
+<h3 id="fiji-installation">Fiji Installation</h3>
+<p>Ensure that an up-to-date version of <a href="https://imagej.net/software/fiji/downloads">Fiji</a> 
+is installed on your system. </p>
 <h2 id="sections">Sections</h2>
 <hr />
 <h3 id="introduction"><a href="what_is_ngff/">Introduction</a></h3>
