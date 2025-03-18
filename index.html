@@ -393,6 +393,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of the tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -424,6 +448,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Data to OME-Zarr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -436,15 +469,6 @@
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting Data to OME-Zarr
     </span>
   </a>
   
@@ -1097,6 +1121,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of the tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1128,6 +1176,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Data to OME-Zarr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -1140,15 +1197,6 @@
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting Data to OME-Zarr
     </span>
   </a>
   
@@ -1190,18 +1238,21 @@ existing tools to address that particular task.</p>
 transition to the version 0.5, many changes have been implemented in the 
 specifications. These changes are, however, not covered or discussed here.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Download the <a href="https://drive.google.com/drive/folders/1anU59y7pvHVqtXNV-yKBz-UdotOjNNY1?usp=sharing">zip file</a> to a convenient local directory.</p>
-<p>Extract the datasets to a folder. This folder contains
-all the image data to be used in the sections.</p>
-<p>Verify that the conda environment <code>ngff_workshop</code> is 
-available by running:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>env<span class="w"> </span>list
-</span></code></pre></div>
-If you do not see <code>ngff_workshop</code>, run the command 
-below to create the environment:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr
-</span></code></pre></div>
-Also make sure an update version of Fiji is installed on
+<h3 id="data">Data</h3>
+<p>The workshop will use several example image datasets. 
+Please download the <a href="https://drive.google.com/drive/folders/1anU59y7pvHVqtXNV-yKBz-UdotOjNNY1?usp=sharing">zip file</a> 
+and extract the datasets to a convenient directory.</p>
+<h3 id="installation-of-the-tools">Installation of the tools</h3>
+<p>The easiest way to install the tools is by using 
+<code>mamba</code>. If you do not have mamba on your system already,
+you can acquire it via miniforge. Please follow the instructions <a href="https://github.com/conda-forge/miniforge">here</a>
+to set up miniforge on your system. Once you have miniforge,
+you will have mamba available on your termial.</p>
+<p>Then you can run the following command to create the environment:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mamba<span class="w"> </span>clean<span class="w"> </span>--all
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr<span class="w"> </span><span class="nv">pyqt</span><span class="o">=</span><span class="m">5</span>.*
+</span></code></pre></div></p>
+<p>Also make sure an up-to-date version of Fiji is installed on
 your system.</p>
 <h2 id="sections">Sections</h2>
 <hr />
@@ -1209,11 +1260,11 @@ your system.</p>
 <hr />
 <h3 id="inspecting-and-validating-ome-zarr"><a href="inspection_overview/">Inspecting and Validating OME-Zarr</a></h3>
 <hr />
+<h3 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h3>
+<hr />
 <h3 id="opening-ome-zarr"><a href="open_overview/">Opening OME-Zarr</a></h3>
 <hr />
 <h3 id="saving-ome-zarr"><a href="save_overview/">Saving OME-Zarr</a></h3>
-<hr />
-<h3 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h3>
 <hr />
 
 
