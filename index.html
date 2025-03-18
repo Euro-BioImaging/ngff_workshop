@@ -1261,15 +1261,16 @@ specifications. These changes are, however, not covered or discussed here.</p>
 Please download the <a href="https://drive.google.com/drive/folders/1anU59y7pvHVqtXNV-yKBz-UdotOjNNY1?usp=sharing">zip file</a> 
 and extract the datasets to a convenient directory.</p>
 <h3 id="installation-of-the-tools">Installation of the tools</h3>
-<p>The easiest way to install the required tools is via mamba.
-If you do not already have mamba, you can acquire it via Miniforge.
+<p>The easiest way to install the required tools is via mamba.</p>
+<p><strong>Installing Mamba</strong></p>
+<p>If you do not already have mamba, you can acquire it via Miniforge.
 Follow the instructions <a href="https://github.com/conda-forge/miniforge">here</a> to set 
 up Miniforge on your system.</p>
 <ul>
 <li><strong>Unix-based systems (Linux/macOS)</strong>: Installing Miniforge will make the mamba command available in your terminal.</li>
 <li><strong>Windows</strong>: Miniforge installation will set up a new command prompt called Miniforge Prompt. You can find it by typing "Miniforge" in the Windows search bar. The mamba command will be available in this prompt.</li>
 </ul>
-<p>Setting Up the Workshop Environment</p>
+<p><strong>Setting Up the Workshop Environment</strong></p>
 <p>Once mamba is installed, run the following commands to clean up any existing package cache and create the environment:
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mamba<span class="w"> </span>clean<span class="w"> </span>--all
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr<span class="w"> </span><span class="nv">pyqt</span><span class="o">=</span><span class="m">5</span>.*
