@@ -10,6 +10,13 @@ Activate the conda environment `ngff_workshop`:
 conda activate ngff_workshop
 ```
 
+### Configure the memory limit
+
+```shell
+eubi configure_cluster --memory_limit 5GB
+eubi show_config
+```
+
 ### Unary Conversion  
 
 Given a dataset structured as follows:  

@@ -12,6 +12,9 @@ theme:
     - header.autohide  # (optional: hides header on scroll for more space)
     - footer.hide
 
+extra:
+  generator: false
+
 extra_css:
   - stylesheets/extra.css
 
@@ -37,9 +40,10 @@ nav:
       - "ome-zarr-py": save_ome_zarr_ome-zarr-py.md
   - Converting Data to OME-Zarr:
       - "Overview": conversion_overview.md
-      - "EuBI-Bridge": ome_zarr_creation_EuBI-Bridge.md
+      - "bioformats2raw": ome_zarr_creation_bf2raw.md
       - "NGFF-Converter": ome_zarr_conversion_ngff-converter.md
       - "BatchConvert": ome_zarr_creation_BatchConvert.md
+      - "EuBI-Bridge": ome_zarr_creation_EuBI-Bridge.md
 
 plugins:
   - search
@@ -57,3 +61,6 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+
+extra_javascript:
+  - https://d3js.org/d3.v7.min.js

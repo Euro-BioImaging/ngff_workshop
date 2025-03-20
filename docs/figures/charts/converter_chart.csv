@@ -1,0 +1,11 @@
+##Which converter should I choose
+
+
+
+
+
+
+
+,unary conversion,aggregative conversion,GUI,OS,converts HCS data,creates OME-XML,parallelisation
+bioformats2raw,yes,only if valid metadata exists,no,all,yes,yes,local on single image
+NGFF-Converter,yes,only if valid metadata exists,no,all,yes,yes,local on single image

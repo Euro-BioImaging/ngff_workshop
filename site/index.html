@@ -393,6 +393,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of the tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiji-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiji Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -424,6 +457,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Data to OME-Zarr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -436,15 +478,6 @@
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting Data to OME-Zarr
     </span>
   </a>
   
@@ -998,11 +1031,11 @@
   
   
     <li class="md-nav__item">
-      <a href="ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
+      <a href="ome_zarr_creation_bf2raw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    EuBI-Bridge
+    bioformats2raw
     
   </span>
   
@@ -1057,6 +1090,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ome_zarr_creation_EuBI-Bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EuBI-Bridge
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1097,6 +1152,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-the-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation of the tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fiji-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fiji Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1128,6 +1216,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converting Data to OME-Zarr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#opening-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Opening OME-Zarr
@@ -1140,15 +1237,6 @@
   <a href="#saving-ome-zarr" class="md-nav__link">
     <span class="md-ellipsis">
       Saving OME-Zarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-data-to-ome-zarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Converting Data to OME-Zarr
     </span>
   </a>
   
@@ -1190,30 +1278,41 @@ existing tools to address that particular task.</p>
 transition to the version 0.5, many changes have been implemented in the 
 specifications. These changes are, however, not covered or discussed here.</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Download the <a href="https://drive.google.com/file/d/13hO32fLmyLrxcaTr14lk5NFx7hZjvfO-/view?usp=drive_link">zip file</a> to a convenient local directory.
-Extract the datasets to a folder. This folder contains
-all the image data to be used in the sections.</p>
-<p>Verify that the conda environment <code>ngff_workshop</code> is 
-available by running:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>env<span class="w"> </span>list
+<h3 id="data">Data</h3>
+<p>The workshop will use several example image datasets. 
+Please download the <a href="https://drive.google.com/drive/folders/1anU59y7pvHVqtXNV-yKBz-UdotOjNNY1?usp=sharing">zip file</a> 
+and extract the datasets to a convenient directory.</p>
+<h3 id="installation-of-the-tools">Installation of the tools</h3>
+<p>The easiest way to install the required tools is via mamba.</p>
+<p><strong>Installing Mamba</strong></p>
+<p>If you do not already have mamba, you can acquire it via Miniforge.
+Follow the instructions <a href="https://github.com/conda-forge/miniforge">here</a> to set 
+up Miniforge on your system.</p>
+<ul>
+<li><strong>Unix-based systems (Linux/macOS)</strong>: Installing Miniforge will make the mamba command available in your terminal.</li>
+<li><strong>Windows</strong>: Miniforge installation will set up a new command prompt called Miniforge Prompt. You can find it by typing "Miniforge" in the Windows search bar. The mamba command will be available in this prompt.</li>
+</ul>
+<p><strong>Setting Up the Workshop Environment</strong></p>
+<p>Once mamba is installed, run the following commands to clean up any existing package cache and create the environment:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mamba<span class="w"> </span>clean<span class="w"> </span>--all
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr<span class="w"> </span><span class="nv">pyqt</span><span class="o">=</span><span class="m">5</span>.*
 </span></code></pre></div>
-If you do not see <code>ngff_workshop</code>, run the command 
-below to create the environment:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>ngff_workshop<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>euro-bioimaging<span class="w"> </span>eubi-bridge<span class="w"> </span>napari-ome-zarr
-</span></code></pre></div>
-Also make sure an update version of Fiji is installed on
-your system.</p>
+<strong>⚠️ Important: older installations of conda may be too slow to create the environment, especially
+with weak internet connection. So it is strongly recommended to install miniforge.</strong></p>
+<h3 id="fiji-installation">Fiji Installation</h3>
+<p>Ensure that an up-to-date version of <a href="https://imagej.net/software/fiji/downloads">Fiji</a> 
+is installed on your system. </p>
 <h2 id="sections">Sections</h2>
 <hr />
 <h3 id="introduction"><a href="what_is_ngff/">Introduction</a></h3>
 <hr />
 <h3 id="inspecting-and-validating-ome-zarr"><a href="inspection_overview/">Inspecting and Validating OME-Zarr</a></h3>
 <hr />
+<h3 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h3>
+<hr />
 <h3 id="opening-ome-zarr"><a href="open_overview/">Opening OME-Zarr</a></h3>
 <hr />
 <h3 id="saving-ome-zarr"><a href="save_overview/">Saving OME-Zarr</a></h3>
-<hr />
-<h3 id="converting-data-to-ome-zarr"><a href="conversion_overview/">Converting Data to OME-Zarr</a></h3>
 <hr />
 
 
@@ -1244,11 +1343,6 @@ your system.</p>
       <div class="md-copyright">
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
     </div>
@@ -1265,6 +1359,8 @@ your system.</p>
     
     
       <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v7.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
